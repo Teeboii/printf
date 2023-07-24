@@ -46,9 +46,8 @@ int _printf(const char *format, ...)
 			printed_chars += printed;
 		}
 	}
-
 	print_buffer(buffer, &buff_ind);
-
+	
 	va_end(list);
 
 	return (printed_chars);
@@ -59,9 +58,7 @@ int _printf(const char *format, ...)
 * @buffer: Array of chars
 * @buff_ind: Index at which to add next char, represents the length.
 */
-
 void print_buffer(char buffer[], int *buff_ind)
-
 {
 	if (*buff_ind > 0)
 		write(1, &buffer[0], *buff_ind);
